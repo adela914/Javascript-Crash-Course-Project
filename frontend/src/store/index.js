@@ -54,40 +54,40 @@ export default new Vuex.Store({
     },
     actions: {
         async fetchRes({ commit }) {
-            const restaurants = await axios.get("http://localhost:3000/restaurants")
+            const restaurants = await axios.get(`${process.env.VUE_APP_API_URL}/restaurants`)
             commit('SET_RES', restaurants.data)
         },
         async fetchARes({ commit }, id) {
-            const restaurant = await axios.get(`http://localhost:3000/restaurants/${id}`)
+            const restaurant = await axios.get(`${process.env.VUE_APP_API_URL}/restaurants/${id}`)
             commit('SET_ARES', restaurant.data)
         },
         async fetchHotRes({ commit }) {
-            const hotRes = await axios.get("http://localhost:3000/restaurants/hot/show")
+            const hotRes = await axios.get(`${process.env.VUE_APP_API_URL}/restaurants/hot/show`)
             commit('SET_HOTRES', hotRes.data)
         },
         async addRes({ commit }, res) {
-            const newRes = await axios.post("http://localhost:3000/restaurants/new", res)
+            const newRes = await axios.post(`${process.env.VUE_APP_API_URL}/restaurants/new`, res)
             commit('ADD_RES', newRes.data)
         },
         async addComment({ commit }, [comment, id]) {
-            const newComment = await axios.post(`http://localhost:3000/restaurants/${id}`, comment)
+            const newComment = await axios.post(`${process.env.VUE_APP_API_URL}/restaurants/${id}`, comment)
             commit('ADD_COMMENT', newComment.data)
         },
         async likeRes({ commit }, id) {
-            const likedRes = await axios.put(`http://localhost:3000/restaurants/like/${id}`)
+            const likedRes = await axios.put(`${process.env.VUE_APP_API_URL}/restaurants/like/${id}`)
             commit('LIKE_RES', likedRes.data)
         },
         async delRes({ commit }, id) {
-            const deletedRes = await axios.delete(`http://localhost:3000/restaurants/${id}`)
+            const deletedRes = await axios.delete(`${process.env.VUE_APP_API_URL}/restaurants/${id}`)
             commit('DEL_RES', deletedRes.data)
         },
         async editRes({ commit }, [id, editedInfo]) {
-            const editedRes = await axios.put(`http://localhost:3000/restaurants/update/${id}`, editedInfo)
+            const editedRes = await axios.put(`${process.env.VUE_APP_API_URL}/restaurants/update/${id}`, editedInfo)
             commit('EDIT_RES', editedRes.data)
             console.log(editedRes)
         },
         async subscribe({ commit }, data) {
-            const userdata = await axios.post("http://localhost:3000/subscribe", data)
+            const userdata = await axios.post(`${process.env.VUE_APP_API_URL}/subscribe`, data)
             commit('SUBSCRIBE', userdata.data)
         }
     }
