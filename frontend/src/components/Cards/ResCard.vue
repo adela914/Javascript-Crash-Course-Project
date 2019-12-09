@@ -3,7 +3,9 @@
     v-card.mx-auto.card(max-width="280") 
       v-img(:src="restaurant.image ? restaurant.image : defaultImg"  aspect-ratio max-height="200px")
       v-card-title {{ restaurant.name }}
-      v-card-subtitle @{{ restaurant.location }}
+      v-card-text.text--primary
+        div @{{ restaurant.location }}
+        div Posted by {{ restaurant.author }}
       v-card-actions
         v-btn(text @click="moveRestaurant") Explore
         v-btn(@click="likeRestaurant" color="purple" text)

@@ -19,8 +19,8 @@
             small *You cannot undo the changes once you click save button.
           v-card-actions
             v-spacer
-            v-btn(color="blue darken-1" text @click="dialog = false") Cancel
-            v-btn(color="blue darken-1" text @click="editRestaurant()") Save
+            v-btn(color="rgb(253, 210, 74)" text @click="dialog = false") Cancel
+            v-btn(color="rgb(253, 210, 74)" text @click="editRestaurant()") Save
 
               
 
