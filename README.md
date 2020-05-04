@@ -1,11 +1,44 @@
-### To start server
+# Personal project for JS crash course from WTM
+
+This is a personal project for Women Techmakers Berlin's JavaScript Crash Course 2019 at Wayfair.
+First of all, I would like to thank to all the support from organizers, tutors and students.
+Without their support and helps I couldn't learn and grow this much. Thank you.
+
+# MOGO🍱
+
+Mogo means "Eat!" in Korean. This application is for people who have a craving for good authentic Korean Restaurants in Berlin. In this application people can share their favorite restaurants and their opinions about the restaurants.
+
+For this project I mainly aimed to make the four basic functions of CRUD.
+
+## Demo
+
+### Search Feature
+
+![](Mogo_Search.gif)
+
+### Sharing Restaurant
+
+![](Mogo_share.gif)
+
+### Delete/Edit Restaurant
+
+![](Mogo_delete.gif)
+
+### Comment/Subscribe Feature
+
+![](Mogo_comment.gif)
+
+## How to run
+
+### Backend
 
 ```
-$ cd week7
+$ cd backend
 $ npm i
 $ nodemon index.js
 
 ```
+
 Make sure MongoDB is running.
 
 ```
@@ -16,55 +49,71 @@ $ mongo
 http://localhost:3000
 
 ### Frontend
+
 ```
 
 $ cd frontend
 $ npm install -D pug pug-plain-loader
 $ vue add vuetify
+$ npm i
 $ npm run serve
 
 ```
+
 http://localhost:8080/
 
+## Users can
 
-###  AXIOS 
+<ul>
+  <li> <b><em>C</em></b> : share a new restaurant and write comments.
+  <li> <b><em>R</em></b> : see posted restaurants and comments.
+  <li> <b><em>U</em></b> : update information of restaurants.
+  <li> <b><em>D</em></b> : delete their posts by confirming their password.
+ <hr>
+  <li> <b><em>Bridging APIs</em></b> : sing in for newsletter. (<a href="https://mailchimp.com/developer/">Mailchimp</a> API used)
+</ul>
 
-#### Restaurant
+## Details
 
-Get list of restaurants
-```
-axios.get('http://localhost:3000/restaurants').then(console.log)
-```
-Get a specific restaurant
-```
-axios.get('http://localhost:3000/restaurants/:id').then(console.log)
-```
-Create a new restaurant
-```
-axios.post('http://localhost:3000/restaurants/new', {name: 'test', location: 'location'}).then(console.log)
-```
-Update a restaurant
-```
-axios.put('http://localhost:3000/restaurants/update/:id', {name: 'test updated', location: 'location updated'}).then(console.log)
-```
-Delete a restaurant
-```
-axios.delete('http://localhost:3000/restaurants/:id').then(console.log)
-```
+<ul>
+<li> Search restaurants by name.  </li>
+<li> Upload image by url.
+<li> Leave comments and see them right away.</li>
+<li> Delete their posts only by confirmation with password. </li>
+<li> In case they put wrong password they should get informed. </li>
+<li> Sign up for newsletter and get an alert of confirmation. </li>
+<li> Like restaurants.</li>
+<li> Check out most popular 3 restaurants based on the number of likes.</li>
+<li> Responsive design.  </li>
+<li> When users don't upload an image default image should show up.</li>
+</ul>
 
-#### Comment
+## Backend
 
-Get list of comments
-```
-axios.get('http://localhost:3000/comments').then(console.log)
-```
-Create a comment on a restaurant
+Major frameworks used for backend :
 
-```
-axios.post('http://localhost:3000/restaurants/:id', {text: 'test', author: 'location'}).then(console.log)
-```
+<ul>
+<li> Node.js </li>
+<li> Express </li>
+<li> MongoDB </li>
+<li> Axios </li>
+</ul>
 
-Delete a comment 
-```
-axios.delete('http://localhost:3000/comments/:id').then(console.log)
-```
+## Frontend
+
+Major frameworks used for frontend :
+
+<ul>
+<li> Vue.js </li>
+<li> Pug </li>
+<li> Vuetify </li>
+</ul>
+
+## API
+
+To be able to communicate with users better. Users can sign up for newsletter.
+For that <a href="https://mailchimp.com/developer/">Mailchimp</a> API is used.
+
+## Test
+
+For testing application Avajs/Ava has been used.
