@@ -10,24 +10,6 @@ Mogo means "Eat!" in Korean. This application is for people who have a craving f
 
 For this project I mainly aimed to make the four basic functions of CRUD.
 
-## Demo
-
-### Search Feature
-
-![](Mogo_Search.gif)
-
-### Sharing Restaurant
-
-![](Mogo_share.gif)
-
-### Delete/Edit Restaurant
-
-![](Mogo_delete.gif)
-
-### Comment/Subscribe Feature
-
-![](Mogo_comment.gif)
-
 ## How to run
 
 ### Backend
