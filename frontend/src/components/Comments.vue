@@ -17,9 +17,8 @@ export default {
     props: {
       comments: {
         type: Array
-      }
     }
-  
+  } 
 }
 </script>
 

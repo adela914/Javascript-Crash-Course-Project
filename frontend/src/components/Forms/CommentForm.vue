@@ -21,8 +21,8 @@ import { mapActions } from 'vuex'
   export default { 
     data() {
       return {
-        author: null,
-        text: null
+        author: '',
+        text: ''
       }
     },
     methods: {
@@ -38,8 +38,8 @@ import { mapActions } from 'vuex'
 
       },
       clearForm() {
-        this.author = null,
-        this.text = null
+        this.author = '',
+        this.text = ''
       }
     },
     name: 'FormComment',

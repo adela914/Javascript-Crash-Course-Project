@@ -11,13 +11,6 @@
         v-list-item-subtitle.text-right Last updated time : {{ restaurant.updatedAt }}
     v-img(:src="restaurant.image ? restaurant.image : defaultImg"  height="250")
     v-card-text {{ restaurant.description }} 
-  
-    
-
-    
-    
-
-
 
 </template>
 

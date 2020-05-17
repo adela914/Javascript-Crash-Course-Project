@@ -20,8 +20,8 @@ export default {
   data() {
     return {
       dialog: false,
-      password: null,
-      alert:false
+      password: '',
+      alert: false
     }
   },
   props: {
@@ -44,9 +44,9 @@ export default {
       cancelModal() {
         this.dialog = false
         this.alert = false
-        this.password = null
-      }
+        this.password = ''
     }
+  }
 }
 
   

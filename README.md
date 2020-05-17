@@ -14,18 +14,18 @@ For this project I mainly aimed to make the four basic functions of CRUD.
 
 ### Backend
 
+First of all, please make sure MongoDB is running.
+
+```
+$ mongod
+$ mongo
+```
+
 ```
 $ cd backend
 $ npm i
 $ nodemon index.js
 
-```
-
-Make sure MongoDB is running.
-
-```
-$ mongod
-$ mongo
 ```
 
 http://localhost:3000

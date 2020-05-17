@@ -22,32 +22,37 @@ import { mapActions } from 'vuex'
 export default {
   name: 'SubscribeForm',
   data() {
-    
-      return {
-        alert:false,
-        fName:"",
-        lName:"",
-        email:""
-      }
-    },
-    methods: {
-      ...mapActions(['subscribe']),
-      Signup() {
-        const userInfo= {
-          fName:this.fName,
-          lName:this.lName,
-          email:this.email
-        }
-        this.subscribe(userInfo)
-        this.alert = true
-        this.clearForm()
+    return {
+      alert: false,
+      fName: '',
+      lName: '',
+      email: '',
+      valid: true,
+      lazy: true,
+      rules: {
+        required: [(value) => !!value || 'Required.'],
       },
-      clearForm() {
-        this.fName = null,
-        this.lName = null,
-        this.email = null
-       
-      }
     }
+  },
+
+  methods: {
+    ...mapActions(['subscribe']),
+    async Signup() {
+      const userInfo = {
+        fName: this.fName,
+        lName: this.lName,
+        email: this.email,
+      }
+      await this.$refs.form.validate()
+      this.subscribe(userInfo)
+      this.alert = true
+      await this.clearForm()
+    },
+    clearForm() {
+        (this.fName = ''),
+        (this.lName = ''),
+        (this.email = '')
+    },
+  },
 }
 </script>

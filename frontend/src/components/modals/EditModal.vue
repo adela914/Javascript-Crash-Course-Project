@@ -22,9 +22,6 @@
             v-btn(color="rgb(253, 210, 74)" text @click="dialog = false") Cancel
             v-btn(color="rgb(253, 210, 74)" text @click="editRestaurant()") Save
 
-              
-
-
 </template>
 
 <script>
@@ -52,11 +49,9 @@ export default {
         description: this.restaurant.description
         }
         this.editRes([this.restaurant._id, editedRes])
-        this.dialog = false
-
-      
-      },
-    }
+        this.dialog = false     
+    },
+  }
 }
 
   

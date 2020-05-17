@@ -24,12 +24,12 @@ import { mapActions } from 'vuex'
   export default { 
     data() {
       return {
-        author: null,
-        name: null,
-        location: null,
-        image: null,
-        description: null,
-        password: null,
+        author: '',
+        name: '',
+        location: '',
+        image: '',
+        description: '',
+        password: '',
        
       }
     },
@@ -50,12 +50,12 @@ import { mapActions } from 'vuex'
         this.$router.push('/')
       },
       clearForm() {
-        this.author = null,
-        this.name = null,
-        this.location = null,
-        this.image = null,
-        this.description = null
-        this.password =null
+        this.author = '',
+        this.name = '',
+        this.location = '',
+        this.image = '',
+        this.description = ''
+        this.password =''
       }
     },
     name: 'Form',
